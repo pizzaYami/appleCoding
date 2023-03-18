@@ -10,6 +10,7 @@ import { useState } from 'react';
 import { Route, Routes, Link, useNavigate, Outlet } from 'react-router-dom'
 import Detail from './routers/detail';
 
+
 function App() {
 
   let [shoes] = useState(data)
@@ -64,20 +65,10 @@ function App() {
           </Container>} />
         <Route path="/detail/:id" element={<Detail shoes={shoes}/>} />
       </Routes>
+
     </>
   );
 }
-
-function Event(){
-  return(
-    <div>
-      <h4>오늘의 이벤트</h4>
-      <Outlet></Outlet>
-    </div>
-  )
-  
-}
-
 
 
 export default App;
