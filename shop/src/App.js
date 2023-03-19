@@ -84,7 +84,7 @@ function App() {
               })
               .catch(()=>{alert('로딩중')})
 
-              
+
             }}>버튼</button>
           </Container>} />
         <Route path="/Detail/:id" element={<Detail shoes={shoes}/>} />
