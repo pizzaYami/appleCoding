@@ -6,11 +6,11 @@ import bg from './img/bg.png';
 import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
 import data from './data'
-import { useState } from 'react';
+import { createContext, useEffect, useState } from 'react';
 import { Route, Routes, Link, useNavigate, Outlet } from 'react-router-dom'
 import Detail from './routers/Detail';
-import axios from 'axios'
-
+import axios from 'axios';
+import Cart from './routers/Cart.js';
 
 function App() {
 
@@ -18,6 +18,11 @@ function App() {
   let navigate = useNavigate()
   let [clickCount, setClickCount] = useState(2)
   let [lodingUI, setLodingUI] = useState(false) 
+
+  // 홈페이지 들어갈떄 localStorage에 시청기록남기기위해 빈배열 만드는 작업
+  useEffect(()=>{
+    localStorage.setItem('watched', JSON.stringify([]))
+  },[]) 
 
   // 상품카드 만드는 컴폰너트
   function Card(props) {
@@ -28,8 +33,8 @@ function App() {
             let src = `https://codingapple1.github.io/shop/shoes${i + 1}.jpg`
 
             return (
-              <Col>
-                <div key={i}>
+              <Col key={i}>
+                <div >
                   <img src={src} width="80%" />
                   <h4>{el.title}</h4>
                   <p>{el.price}</p>
@@ -51,8 +56,8 @@ function App() {
           <Navbar.Brand href="#home">조샵</Navbar.Brand>
           <Nav className="me-auto">
             <Nav.Link onClick={()=>navigate('/')}>Home</Nav.Link>
-            <Nav.Link onClick={()=>navigate('/Detail')}>Detail</Nav.Link>
-            <Nav.Link href="#pricing">Pricing</Nav.Link>
+            <Nav.Link onClick={()=>navigate('/Detail/1')}>Detail</Nav.Link>
+            <Nav.Link onClick={()=>navigate('/Cart')}>Cart</Nav.Link>
           </Nav>
         </Container>
       </Navbar>
@@ -87,7 +92,12 @@ function App() {
 
             }}>버튼</button>
           </Container>} />
-        <Route path="/Detail/:id" element={<Detail shoes={shoes}/>} />
+        <Route path="/Detail/:id" element={
+          <Detail shoes={shoes}/>} 
+        />
+
+        <Route path="/cart" element={<Cart/>}/>
+
       </Routes>
 
     </>
