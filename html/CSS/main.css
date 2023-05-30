@@ -42,22 +42,21 @@
 }
 
 .left-menu {
-  width: 20%;
+  width: 19%;
   height: 400px;
   background-color: cornflowerblue;
-  float: left;
+  display: inline-block;
 }
 
 .right {
   width: 80%;
   height: 400px;
   background-color: coral;
-  float: right;
+  display: inline-block;
 }
 
 .footer {
   width: 100%;
   height: 100px;
   background-color: grey;
-  clear: both;
 }
