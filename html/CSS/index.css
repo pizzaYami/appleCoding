@@ -25,3 +25,11 @@
 .body {
   margin: 10px;
 }
+
+.Navbar li {
+  display: inline-block;
+  width: 60px;
+  text-align: center;
+  background-color: #eee;
+  padding: 10px;
+}
