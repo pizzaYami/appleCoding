@@ -3,18 +3,30 @@
   display: block;
   margin-left: auto;
   margin-right: auto;
+  display: flex;
 }
 
 .left {
   width: 80%;
   background-color: red;
-  display: float;
 }
 
 .right {
-  width: 20%;
   background-color: blue;
 }
 
 .profile {
+  display: flex;
+  margin: 10px;
+}
+
+.profileBody {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  margin-left: 20px;
+}
+
+.body {
+  margin: 10px;
 }
