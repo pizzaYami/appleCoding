@@ -17,20 +17,6 @@
   color: red;
 }
 
-.box {
-  background-color: cadetblue;
-  width: 100px;
-  margin-left: 30px;
-  padding: 40px;
-  border-radius: 15px;
-  display: block;
-  margin-left: auto;
-  margin-right: auto;
-  text-align: center;
-  color: white;
-  box-shadow: 10px 10px 10px black;
-}
-
 .container {
   width: 800px;
 }
@@ -82,4 +68,26 @@
 .main-body {
   color: white;
   font-size: 22px;
+}
+
+.main-button {
+  padding: 15px;
+  font-size: 20px;
+  background: white;
+  border: none;
+  border-radius: 5px;
+  position: relative;
+}
+
+.box {
+  width: 600px;
+  height: 200px;
+  background-color: rgb(238, 232, 232);
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 30px;
+  text-align: center;
+  position: relative;
+  top: -50px;
 }
