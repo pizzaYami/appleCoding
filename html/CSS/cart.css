@@ -64,3 +64,26 @@ h2 {
   text-align: right;
   padding: 20px;
 }
+
+button {
+  padding: 15px;
+  font-size: 20px;
+  border: none;
+  border-radius: 10px;
+  background-color: coral;
+  color: white;
+  cursor: pointer;
+  margin-top: 20px;
+}
+
+button:hover {
+  background-color: chocolate;
+}
+
+button:focus {
+  background-color: red;
+}
+
+button:active {
+  background-color: yellow;
+}
