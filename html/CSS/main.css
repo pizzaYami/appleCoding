@@ -1,3 +1,9 @@
+* {
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+}
+
 .profile {
   width: 100px;
   display: block;
@@ -80,14 +86,69 @@
 }
 
 .box {
-  width: 600px;
+  width: 60%;
+  max-width: 600px;
   height: 200px;
   background-color: rgb(238, 232, 232);
   display: block;
   margin-left: auto;
   margin-right: auto;
+  margin-top: 0px;
   padding: 30px;
   text-align: center;
   position: relative;
   top: -50px;
+}
+
+.login {
+  width: 400px;
+  height: 500px;
+  background-color: deepskyblue;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 40px;
+}
+
+.login p {
+  margin: 10px 0px;
+}
+
+input {
+  padding: 10px;
+  border: solid 1px rgb(197, 197, 197);
+  border-radius: 3px;
+  width: 100%;
+}
+
+.name {
+  display: flex;
+  justify-content: space-between;
+}
+
+.name input {
+  width: 150px;
+}
+
+.message {
+  height: 150px;
+}
+
+.login-bottom {
+  margin-top: 20px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.login-subscribe {
+  display: flex;
+}
+
+.login-subscribe > input {
+  margin-right: 10px;
+}
+
+.login-button {
+  width: 120px;
+  background-color: #ffbf35;
+  color: white;
 }
