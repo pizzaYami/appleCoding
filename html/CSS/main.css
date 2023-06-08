@@ -100,13 +100,20 @@
   top: -50px;
 }
 
+.login-background {
+  width: 450px;
+  height: 550px;
+  background-color: black;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 30px;
+}
+
 .login {
   width: 400px;
   height: 500px;
-  background-color: deepskyblue;
-  margin-left: auto;
-  margin-right: auto;
-  padding: 40px;
+  background-color: white;
+  padding: 30px;
 }
 
 .login p {
