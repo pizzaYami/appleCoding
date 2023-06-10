@@ -4,6 +4,14 @@
   box-sizing: border-box;
 }
 
+@font-face {
+  font-family: "NanumSquare";
+  src: url(../font/NanumSquareAcB.woff);
+}
+
+body {
+  font-family: "NanumSquare";
+}
 tr {
   border-bottom: 1px solid #b2ccd6;
 }
