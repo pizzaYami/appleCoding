@@ -173,3 +173,9 @@ input {
   background-color: #ffbf35;
   color: white;
 }
+
+@media screen and (max-width: 1200px) {
+  .main-title {
+    font-size: 30px;
+  }
+}
