@@ -4,6 +4,20 @@
   box-sizing: border-box;
 }
 
+.flex-header {
+  height: 80px;
+  width: 100%;
+  padding: 20px;
+  font-size: 40px;
+  display: flex;
+  background-color: #ff8082;
+  color: white;
+}
+
+.flex-header > div {
+  margin: 0px 10px;
+}
+
 .profile {
   width: 100px;
   display: block;
