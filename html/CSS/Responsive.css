@@ -65,15 +65,26 @@ div > i {
   width: 100%;
 }
 
+.overlay-wrap {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+
 .overlay {
   position: absolute;
+  top: 100%;
   width: 100%;
   height: 100%;
   background: rgba(0, 0, 0, 0.5);
   opacity: 0;
   transition: all 1s;
+  color: white;
+  padding: 10px;
 }
 
-.overlay:hover {
+.overlay-wrap:hover .overlay {
+  top: 50%;
   opacity: 1;
 }
