@@ -88,3 +88,13 @@ div > i {
   top: 50%;
   opacity: 1;
 }
+
+progress {
+  appearance: none;
+}
+progress::-webkit-progress-bar {
+  background: #f0f0f0;
+}
+progress::-webkit-progress-value {
+  background: red;
+}
