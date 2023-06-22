@@ -1,22 +1,40 @@
-$main-color: #2a4cb2;
-$sub-color: #eeeeee;
-$기본사이즈: 16px;
+// %alert-box {
+//   border-radius: 5px;
+//   border: 0px;
+//   margin-bottom: 20px;
+// }
 
-.btn {
-  width: 200px;
-  height: 200px;
-  padding: 20px;
+@mixin alert-box($color) {
+  border-radius: 5px;
+  border: 0px;
+  margin-bottom: 20px;
+  background: $color;
 }
 
-.box-green {
-  @extend .btn;
-  background-color: green;
+li {
+  width: 300px;
+  height: 40px;
+  margin-top: -1px;
+  border: 1px solid rgb(209, 209, 209);
+  padding: 10px;
+  list-style-type: none;
+  display: flex;
+  align-items: center;
 }
-.box-red {
-  @extend .btn;
-  background-color: red;
-}
-.box-blue {
-  @extend .btn;
+
+.active {
   background-color: blue;
+  color: white;
+}
+
+.green-alert {
+  @include alert-box(#def0d8);
+}
+
+.blue-alert {
+  @include alert-box(#d9edf7);
+}
+
+.yellow-alert {
+  @include alert-box(#fcf8e3);
 }

@@ -1,17 +1,36 @@
-.btn, .box-blue, .box-red, .box-green {
-  width: 200px;
-  height: 200px;
-  padding: 20px;
+li {
+  width: 300px;
+  height: 40px;
+  margin-top: -1px;
+  border: 1px solid rgb(209, 209, 209);
+  padding: 10px;
+  list-style-type: none;
+  display: flex;
+  align-items: center;
 }
 
-.box-green {
-  background-color: green;
-}
-
-.box-red {
-  background-color: red;
-}
-
-.box-blue {
+.active {
   background-color: blue;
+  color: white;
+}
+
+.green-alert {
+  border-radius: 5px;
+  border: 0px;
+  margin-bottom: 20px;
+  background: #def0d8;
+}
+
+.blue-alert {
+  border-radius: 5px;
+  border: 0px;
+  margin-bottom: 20px;
+  background: #d9edf7;
+}
+
+.yellow-alert {
+  border-radius: 5px;
+  border: 0px;
+  margin-bottom: 20px;
+  background: #fcf8e3;
 }/*# sourceMappingURL=test.css.map */
