@@ -1,0 +1,22 @@
+$main-color: #2a4cb2;
+$sub-color: #eeeeee;
+$기본사이즈: 16px;
+
+.btn {
+  width: 200px;
+  height: 200px;
+  padding: 20px;
+}
+
+.box-green {
+  @extend .btn;
+  background-color: green;
+}
+.box-red {
+  @extend .btn;
+  background-color: red;
+}
+.box-blue {
+  @extend .btn;
+  background-color: blue;
+}
