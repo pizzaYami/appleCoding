@@ -33,4 +33,17 @@ li {
   border: 0px;
   margin-bottom: 20px;
   background: #fcf8e3;
+}
+
+.row {
+  display: flex;
+}
+.row .col-6 {
+  width: 50%;
+}
+.row .col-4 {
+  width: 33.3%;
+}
+.row .col-3 {
+  width: 25%;
 }/*# sourceMappingURL=test.css.map */

@@ -38,3 +38,16 @@ li {
 .yellow-alert {
   @include alert-box(#fcf8e3);
 }
+
+.row {
+  display: flex;
+  .col-6 {
+    width: 50%;
+  }
+  .col-4 {
+    width: 33.3%;
+  }
+  .col-3 {
+    width: 25%;
+  }
+}
