@@ -1,3 +1,4 @@
+@charset "UTF-8";
 li {
   width: 300px;
   height: 40px;
@@ -46,4 +47,98 @@ li {
 }
 .row .col-3 {
   width: 25%;
+}
+
+.button-ani {
+  background: #d9edf7;
+  color: white;
+  width: 200px;
+  height: 50px;
+  border: 0px;
+  border-radius: 5px;
+}
+
+.button-ani:hover {
+  animation-name: 움찔;
+  animation-duration: 1s;
+}
+
+@keyframes 움찔 {
+  0% {
+    transform: rotate(0);
+  }
+  33% {
+    transform: rotate(-10deg);
+  }
+  66% {
+    transform: rotate(10deg);
+  }
+  100% {
+    transform: rotate(0);
+  }
+}
+.plus-ani {
+  width: 100px;
+  height: 100px;
+  margin-right: auto;
+  margin-left: auto;
+  text-align: center;
+  font-size: 100px;
+}
+
+.plus-ani:hover {
+  animation-name: 도리도리;
+  animation-duration: 1s;
+}
+
+@keyframes 도리도리 {
+  0% {
+    transform: rotate(0);
+  }
+  33% {
+    transform: rotate(-20deg);
+  }
+  100% {
+    transform: rotate(45deg) scale(2);
+  }
+}
+.sidebar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 150px;
+  height: 100vh;
+  background-color: black;
+  color: white;
+}
+.sidebar h4,
+.sidebar p {
+  margin-top: 30px;
+  text-align: center;
+  font-size: 23px;
+}
+.sidebar p {
+  transform: translateX(-100px);
+}
+
+.sidebar:hover {
+  width: 300px;
+  transition: all 1s;
+}
+.sidebar:hover p {
+  animation-name: 호다닥;
+  animation-duration: 0.7s;
+  transform: translateX(0px);
+}
+
+@keyframes 호다닥 {
+  0% {
+    transform: translateX(-100px);
+  }
+  50% {
+    transform: translateX(30px) skew(-15deg);
+  }
+  100% {
+    transform: translateX(0px);
+  }
 }/*# sourceMappingURL=test.css.map */
