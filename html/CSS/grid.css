@@ -1,24 +1,17 @@
-.grid-container {
-  display: grid;
-  grid-template-columns: 300px 300px 300px;
-  grid-template-rows: 300px 300px 300px;
-  grid-gap: 5px;
-  grid-template-areas: "main main ." "main main ." ". . . ";
-}
-.grid-container div {
-  border: 1px solid black;
-}
-.grid-container img {
-  width: 100%;
+.grey {
+  background: lightgrey;
+  height: 2000px;
+  margin-top: 500px;
 }
 
-.grid-main {
-  grid-area: main;
+.text {
+  float: left;
+  width: 300px;
 }
 
-@media screen and (max-width: 756px) {
-  .grid-container {
-    display: flex;
-    flex-direction: column;
-  }
+.image {
+  float: right;
+  width: 400px;
+  position: sticky;
+  top: 300px;
 }/*# sourceMappingURL=grid.css.map */
