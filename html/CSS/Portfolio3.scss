@@ -5,6 +5,9 @@
   padding: 0;
   outline: 0;
 }
+body {
+  background-color: rgb(242, 241, 241);
+}
 
 header {
   width: 100%;
@@ -15,6 +18,7 @@ header {
   align-items: center;
   padding: 10px 50px 10px 50px;
   box-shadow: 2px 2px 2px 2px rgb(215, 215, 215);
+  background-color: white;
 }
 
 .header-search {
@@ -99,6 +103,116 @@ header {
   }
   cursor: pointer;
 }
+
+aside {
+  width: 140px;
+  height: 100vh;
+  background-color: #494bb4;
+  position: fixed;
+  top: 0;
+
+  transition: all 0.5s;
+  transform: translateX(-100px);
+  &:hover {
+    transform: translateX(0px);
+    transition: all 0.5s;
+    .side-icons {
+      transform: translateX(0px);
+      transition: all 0.5s;
+    }
+    .side-text {
+      animation-duration: 0.5s;
+      animation-name: slide;
+    }
+  }
+}
+
+.side {
+  display: flex;
+}
+
+.side-icons {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  transform: translateX(100px);
+  img {
+    color: white;
+    margin: 35px 10px 0 10px;
+    width: 20px;
+  }
+}
+
+.side-text {
+  p {
+    margin-top: 36px;
+    color: white;
+  }
+}
+
+@keyframes slide {
+  0% {
+    transform: translateX(-100px);
+  }
+  50% {
+    transform: translateX(-50px);
+  }
+  100% {
+    transform: translateX(0px);
+  }
+}
+
+section {
+  margin-top: 80px;
+  margin-left: 50px;
+  h2 {
+    margin-bottom: 20px;
+  }
+}
+
+.cards {
+  display: flex;
+  justify-content: space-between;
+}
+
+@mixin card($left-color) {
+  min-width: 220px;
+  height: 100px;
+  padding: 20px;
+  border-radius: 5px;
+  box-shadow: 2px 2px 2px 2px rgb(215, 215, 215);
+  display: flex;
+  justify-content: space-between;
+  border-left: 5px solid $left-color;
+  margin-bottom: 20px;
+  margin-right: 10px;
+  background-color: white;
+}
+
+.card-mint {
+  @include card(#87ceeb);
+}
+
+.card-green {
+  @include card(#41c95c);
+}
+.card-blue {
+  @include card(blue);
+}
+.card-yellow {
+  @include card(#ffcb55);
+}
+
+.card-content {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  :nth-child(2) {
+    font-size: 20px;
+    font-weight: 600;
+  }
+}
+
 @media screen and (min-width: 768px) {
   .header-menu-container {
     display: none;
@@ -110,5 +224,11 @@ header {
   }
   .header-alerts {
     display: none;
+  }
+  .cards {
+    flex-direction: column;
+  }
+  .card {
+    margin-bottom: 20px;
   }
 }
