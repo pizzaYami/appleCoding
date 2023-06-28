@@ -9,6 +9,10 @@ body {
   background-color: rgb(242, 241, 241);
 }
 
+ul {
+  list-style: none;
+}
+
 header {
   width: 100%;
   height: 60px;
@@ -110,6 +114,7 @@ aside {
   background-color: #494bb4;
   position: fixed;
   top: 0;
+
   transition: all 0.5s;
   transform: translateX(-100px);
   &:hover {
@@ -162,8 +167,7 @@ aside {
 }
 
 section {
-  margin-top: 80px;
-  margin-left: 50px;
+  margin: 80px 10px 0px 50px;
   h2 {
     margin-bottom: 20px;
   }
@@ -175,7 +179,7 @@ section {
 }
 
 @mixin card($left-color) {
-  min-width: 220px;
+  flex: 1;
   height: 100px;
   padding: 20px;
   border-radius: 5px;
@@ -184,19 +188,21 @@ section {
   justify-content: space-between;
   border-left: 5px solid $left-color;
   margin-bottom: 20px;
-  margin-right: 10px;
   background-color: white;
 }
 
 .card-mint {
   @include card(#87ceeb);
+  margin-right: 10px;
 }
 
 .card-green {
   @include card(#41c95c);
+  margin-right: 10px;
 }
 .card-blue {
   @include card(blue);
+  margin-right: 10px;
 }
 .card-yellow {
   @include card(#ffcb55);
@@ -210,6 +216,54 @@ section {
     font-size: 20px;
     font-weight: 600;
   }
+}
+
+main {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.chart {
+  box-shadow: 2px 2px 2px 2px rgb(215, 215, 215);
+  width: 60%;
+  border-radius: 5px;
+  h4 {
+    padding: 10px;
+    background-color: rgb(230, 230, 230);
+  }
+}
+
+.tasks {
+  box-shadow: 2px 2px 2px 2px rgb(215, 215, 215);
+  width: 35%;
+  height: 100%;
+  border-radius: 5px;
+  h4 {
+    padding: 10px;
+    background-color: rgb(230, 230, 230);
+  }
+}
+
+.task {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  height: 50px;
+  background-color: white;
+  padding: 10px 20px;
+  border: 1px solid rgb(233, 233, 233);
+}
+
+.task-num {
+  display: flex;
+  align-items: center;
+  font-size: 14px;
+  border-radius: 10px;
+  background: blue;
+  color: white;
+  padding: 0 10px;
 }
 
 @media screen and (min-width: 768px) {
@@ -229,5 +283,21 @@ section {
   }
   .card {
     margin-bottom: 20px;
+  }
+  .card-yellow {
+    margin-right: 10px;
+  }
+  main {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+  }
+  .chart {
+    width: 100%;
+    margin-bottom: 20px;
+  }
+
+  .tasks {
+    width: 100%;
   }
 }

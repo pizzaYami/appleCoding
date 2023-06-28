@@ -46,7 +46,7 @@
     </aside>
     <section>
       <h2>Dashboard</h2>
-      <div class="cards">
+      <article class="cards">
         <div class="card-mint">
           <div class="card-content">
             <p>Earnings (Monthly)</p>
@@ -75,7 +75,54 @@
           </div>
           <img src="img/message.svg" alt="message" width="35px" />
         </div>
-      </div>
+      </article>
+      <main>
+        <article class="chart">
+          <h4>Earnings Overview</h4>
+          <canvas id="myChart"></canvas>
+          <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+          <script>
+            var ctx = document.getElementById("myChart").getContext("2d");
+            var myChart = new Chart(ctx, {
+              type: "bar",
+              data: {
+                labels: ["Red", "Blue", "Yellow", "Green", "Purple", "Orange"],
+                datasets: [
+                  {
+                    label: "# of Votes",
+                    data: [12, 19, 3, 5, 2, 3],
+                    backgroundColor: "rgba(255, 99, 132, 0.2)",
+                    borderColor: "rgba(255, 99, 132, 1)",
+                    borderWidth: 1,
+                  },
+                ],
+              },
+              options: {
+                scales: {
+                  y: {
+                    beginAtZero: true,
+                  },
+                },
+              },
+            });
+          </script>
+        </article>
+        <article class="tasks">
+          <h4>Tasks</h4>
+          <div class="task">
+            <p>Borrowed Items</p>
+            <div class="task-num">14</div>
+          </div>
+          <div class="task">
+            <p>Trello requests</p>
+            <div class="task-num">2</div>
+          </div>
+          <div class="task">
+            <p>Marked Comments</p>
+            <div class="task-num">1</div>
+          </div>
+        </article>
+      </main>
     </section>
   </body>
 </html>
