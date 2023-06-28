@@ -15,18 +15,22 @@ header {
   align-items: center;
   padding: 10px 50px 10px 50px;
   box-shadow: 2px 2px 2px 2px rgb(215, 215, 215);
-  .header-search {
-    position: relative;
-    width: 250px;
-    height: 100%;
-    border: 1px solid black;
-    border-radius: 5px;
-    overflow: hidden;
-  }
+}
+
+.header-search {
+  position: relative;
+  width: 300px;
+  height: 100%;
+  border: 1px solid black;
+  border-radius: 5px;
+  overflow: hidden;
+  transition: all 0.3s;
   input {
     height: 100%;
     width: 100%;
     padding-left: 10px;
+    border: none;
+    outline: none;
   }
   button {
     position: absolute;
@@ -35,6 +39,10 @@ header {
     right: 0px;
   }
 }
+.header-search:focus-within {
+  width: 500px;
+}
+
 .header-alerts {
   display: flex;
   align-items: center;
@@ -70,4 +78,37 @@ header {
 
 .header-name {
   color: gray;
+}
+
+.header-menu-container {
+  width: 100%;
+  display: flex;
+  flex-direction: row-reverse;
+}
+
+.header-menu {
+  width: 50px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid rgb(219, 219, 219);
+  border-radius: 5px;
+  img {
+    width: 30px;
+  }
+  cursor: pointer;
+}
+@media screen and (min-width: 768px) {
+  .header-menu-container {
+    display: none;
+  }
+}
+@media screen and (max-width: 768px) {
+  .header-search {
+    display: none;
+  }
+  .header-alerts {
+    display: none;
+  }
 }

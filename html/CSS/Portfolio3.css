@@ -16,24 +16,32 @@ header {
   padding: 10px 50px 10px 50px;
   box-shadow: 2px 2px 2px 2px rgb(215, 215, 215);
 }
-header .header-search {
+
+.header-search {
   position: relative;
-  width: 250px;
+  width: 300px;
   height: 100%;
   border: 1px solid black;
   border-radius: 5px;
   overflow: hidden;
+  transition: all 0.3s;
 }
-header input {
+.header-search input {
   height: 100%;
   width: 100%;
   padding-left: 10px;
+  border: none;
+  outline: none;
 }
-header button {
+.header-search button {
   position: absolute;
   width: 40px;
   height: 40px;
   right: 0px;
+}
+
+.header-search:focus-within {
+  width: 500px;
 }
 
 .header-alerts {
@@ -71,4 +79,38 @@ header button {
 
 .header-name {
   color: gray;
+}
+
+.header-menu-container {
+  width: 100%;
+  display: flex;
+  flex-direction: row-reverse;
+}
+
+.header-menu {
+  width: 50px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid rgb(219, 219, 219);
+  border-radius: 5px;
+  cursor: pointer;
+}
+.header-menu img {
+  width: 30px;
+}
+
+@media screen and (min-width: 768px) {
+  .header-menu-container {
+    display: none;
+  }
+}
+@media screen and (max-width: 768px) {
+  .header-search {
+    display: none;
+  }
+  .header-alerts {
+    display: none;
+  }
 }/*# sourceMappingURL=Portfolio3.css.map */
