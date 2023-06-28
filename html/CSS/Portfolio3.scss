@@ -167,15 +167,16 @@ aside {
 }
 
 section {
-  margin: 80px 10px 0px 50px;
+  margin: 120px 10px 0px 100px;
   h2 {
-    margin-bottom: 20px;
+    margin-bottom: 30px;
   }
 }
 
 .cards {
   display: flex;
   justify-content: space-between;
+  margin-bottom: 30px;
 }
 
 @mixin card($left-color) {
@@ -193,16 +194,16 @@ section {
 
 .card-mint {
   @include card(#87ceeb);
-  margin-right: 10px;
+  margin-right: 20px;
 }
 
 .card-green {
   @include card(#41c95c);
-  margin-right: 10px;
+  margin-right: 20px;
 }
 .card-blue {
   @include card(blue);
-  margin-right: 10px;
+  margin-right: 20px;
 }
 .card-yellow {
   @include card(#ffcb55);
